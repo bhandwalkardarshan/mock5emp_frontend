@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Employee Dashboard</h1>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <h1>Add Employee</h1>
+    <form id="employeeForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+            <option value="Tech">Tech</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Operations">Operations</option>
+        </select><br>
+
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" required><br>
+
+        <button type="submit">Add Employee</button>
+    </form>
+
+    <main>
+        <h1 style="text-align: center;">Employees List</h1>
+        <div id="searchContainer">
+            <label for="search">Search by Name:</label>
+            <input type="text" id="search" name="search" placeholder="Enter name">
+            <button type="button" onclick="filterEmployees()">Search</button>
+        </div>
+        <!-- Filter by Department -->
+        <label for="filterDepartment">Filter by Department:</label>
+        <select id="filterDepartment" name="filterDepartment" onchange="filterEmployees()">
+            <option value="Tech">Tech</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Operations">Operations</option>
+        </select>
+
+        <!-- Sort by Salary -->
+        <label for="sortSalary">Sort by Salary:</label>
+        <select id="sortSalary" name="sortSalary" onchange="filterEmployees()">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+        </select>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="employeeTable">
+            <!-- Appointment data will be inserted here using JavaScript -->
+        </tbody>
+    </table>
+        
+        <div id="pagination">
+            
+        </div>
+    </main>
+    <script src="../scripts/dashboard.js"></script>
+</body>
+</html>

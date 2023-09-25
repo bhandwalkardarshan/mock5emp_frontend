@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <h2>Employess Management System</h2>
+    <div>
+        <div class="toggleBtn">
+            <h2 id="toggleRegisterForm">Register</h2>
+            <h2 id="toggleLoginForm">Login</h2>
+        </div>
+        <div id="loginForm">
+            <form id="loginForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required><br><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div id="registerForm">
+            <form id="registerForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email_reg" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password_reg" required><br><br>
+                <label for="password">Confirm Password:</label>
+                <input type="password" id="confirm_password_reg" required><br><br>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script src="./scripts/index.js"></script>
